@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+    <!-- 启用spring mvc 内建的Jackson支持 -->
+    <!-- 设置json和response的字符编码 -->
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters"> <list> <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter" />
+            <ref bean="stringHttpMessageConverter" /> <ref bean="jsonHttpMessageConverter" /> </list>
+        </property> </bean>
+    <bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
+        <property name="supportedMediaTypes"> <list> <value>text/plain;charset=UTF-8</value> </list> </property> </bean>
+    <bean id="jsonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list> <value>text/plain;charset=UTF-8</value> </list>
+        </property>
+    </bean>
+    <!-- 开始aop支持，动态代理支持 -->
+    <aop:aspectj-autoproxy expose-proxy="true" proxy-target-class="true" />
+    <!-- 导入mongodb的配置文件 -->
+    <import resource="mongodb.xml"/>
+
+</beans>
