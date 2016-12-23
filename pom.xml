@@ -30,7 +30,7 @@
 
   <build>
     <plugins>
-      <plugin>
+     <plugin>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>maven-jetty-plugin</artifactId>
         <version>6.1.7</version>
@@ -45,6 +45,14 @@
           <contextPath>/</contextPath>
         </configuration>
       </plugin>
+    <!--  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>-->
     </plugins>
   </build>
 
@@ -58,13 +66,31 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>4.2.8.RELEASE</version>
+      <version>3.2.5.RElEASE</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>4.2.8.RELEASE</version>
+      <version>3.2.5.RElEASE</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>3.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>3.2.5.RELEASE</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -78,18 +104,40 @@
       <scope>test</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
+    <!-- mongodb java driver -->
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongo-java-driver</artifactId>
+      <version>2.11.0</version>
+    </dependency>
+
+    <!-- Spring data mongodb -->
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-mongodb</artifactId>
-      <version>1.7.0.RELEASE</version>
+      <version>1.2.0.RELEASE</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>4.2.8.RELEASE</version>
+      <version>3.2.5.RELEASE</version>
     </dependency>
-
+    <dependency>
+      <groupId>cglib</groupId>
+      <artifactId>cglib</artifactId>
+      <version>2.2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.9</version>
+    </dependency>
+    <dependency>
+    <groupId>javax</groupId>
+    <artifactId>javaee-api</artifactId>
+    <version>7.0</version>
+      <scope>provided</scope>
+  </dependency>
   </dependencies>
 
 </project>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework:spring-core:3.2.5.RElEASE">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.2.5.RElEASE/spring-core-3.2.5.RElEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.2.5.RElEASE/spring-core-3.2.5.RElEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.2.5.RElEASE/spring-core-3.2.5.RElEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
