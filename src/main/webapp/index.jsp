@@ -12,5 +12,6 @@
 </head>
 <body>
 <h>hello word</h>
+<a href="http://localhost:8080/user/test.form">进入</a>
 </body>
 </html>
