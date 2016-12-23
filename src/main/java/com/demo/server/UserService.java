@@ -26,4 +26,7 @@ public class UserService {
         User one=momgo.findOne(query,User.class);
         momgo.remove(one);
     }
+    public void insert(User use){
+        momgo.save(use);
+    }
 }
